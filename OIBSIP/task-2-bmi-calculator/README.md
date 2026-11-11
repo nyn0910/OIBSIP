@@ -1,33 +1,53 @@
-def get_positive_number(prompt):
-    while True:
-        try:
-            value = float(input(prompt))
+# BMI Calculator
 
-            if value <= 0:
-                print("Please enter a number greater than zero.")
-            else:
-                return value
+## Internship
+Oasis Infobyte – Python Programming Internship
 
-        except ValueError:
-            print("Invalid input! Please enter a number.")
+## Project
+Beginner-Level BMI Calculator
 
+## Description
+This Python program calculates Body Mass Index (BMI) using the user's weight in kilograms and height in metres. It displays BMI rounded to two decimal places and the category: Underweight, Normal Weight, Overweight, or Obese.
 
-print("===== BMI CALCULATOR =====")
+## Features
+- Takes weight and height as input.
+- Calculates BMI.
+- Displays BMI rounded to two decimal places.
+- Displays the BMI category.
+- Handles non-numeric input.
+- Rejects zero and negative values.
 
-weight = get_positive_number("Enter your weight in kg: ")
-height = get_positive_number("Enter your height in metres: ")
+## Requirements
+- Python 3
 
-bmi = weight / (height ** 2)
+## How to Run
+1. Open a terminal in the project folder.
+2. Run:
 
-if bmi < 18.5:
-    category = "Underweight"
-elif bmi < 25:
-    category = "Normal"
-elif bmi < 30:
-    category = "Overweight"
-else:
-    category = "Obese"
+   `python bmi_calculator.py`
 
-print("\n===== YOUR RESULT =====")
-print(f"Your BMI is: {bmi:.2f}")
-print(f"Category: {category}")
+3. Enter weight in kg.
+4. Enter height in metres.
+
+## Formula
+BMI = Weight (kg) / Height (m)²
+
+## BMI Categories
+
+| BMI Range | Category |
+|---|---|
+| Below 18.5 | Underweight |
+| 18.5–24.9 | Normal |
+| 25–29.9 | Overweight |
+| 30 or above | Obese |
+
+## Error Handling
+- Invalid input message.
+- Weight must be greater than zero.
+- Height must be greater than zero.
+
+## Author
+Nayan
+
+## Organization
+Oasis Infobyte
